@@ -27,12 +27,6 @@ App::uses('ControllerTestCase', 'TestSuite');
 App::uses('CakeTestModel', 'TestSuite/Fixture');
 
 /*
- * lib/Cake/bootstrap.php and the `Error.level` setting exclude E_DEPRECATED at runtime,
- * which would hide deprecations from the error handler below. Report everything in tests.
- */
-error_reporting(E_ALL);
-
-/*
  * PHP's own deprecations (E_DEPRECATED) are collected and summarized on STDERR at shutdown
  * instead of failing the test, until the existing ones are fixed.
  * Everything else, including E_USER_DEPRECATED, is converted to exceptions by PHPUnit.
